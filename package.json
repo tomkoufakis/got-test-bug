@@ -1,0 +1,27 @@
+{
+  "name": "got-test",
+  "version": "0.0.1",
+  "scripts": {
+    "clean": "rm -rf node_modules && npm install",
+    "test": "lab test",
+    "lab": "lab"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "author": "tkoufakis.",
+  "license": "MIT",
+  "dependencies": {
+    "agentkeepalive": "4.0.2",
+    "apollo-errors": "1.9.0",
+    "convert-hrtime": "^2.0.0",
+    "got": "^11.5.1"
+  },
+  "devDependencies": {
+    "chai": "4.2.0",
+    "lab": "^18.0.2",
+    "mocha": "^6.2.1",
+    "nock": "^13.0.3",
+    "pre-commit": "^1.2.2"
+  }
+}

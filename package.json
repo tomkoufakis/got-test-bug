@@ -15,7 +15,8 @@
     "agentkeepalive": "4.0.2",
     "apollo-errors": "1.9.0",
     "convert-hrtime": "^2.0.0",
-    "got": "^11.5.1"
+    "got": "^11.5.1",
+    "node-fetch": "^2.6.0"
   },
   "devDependencies": {
     "chai": "4.2.0",

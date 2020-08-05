@@ -1,6 +1,7 @@
 /* jslint node: true */
 
 const request = require('got'),
+      fetch = require('node-fetch'),
       AgentKeepAlive = require('agentkeepalive'),
       httpAgent = new AgentKeepAlive(),
       HTTPError = require('apollo-errors').createError('HTTPError', {
@@ -22,14 +23,14 @@ const requestWithContext = async (context, url) => {
     agent: {
       http: httpAgent
     },
-    decompress: true, // the default, adding for verbosity
-    responseType: 'text', // the default, adding for verbosity
+    compress: true, // the default, adding for verbosity
+    // responseType: 'text', // the default, adding for verbosity
     timeout: 1000,
     uri: url,
     headers: {}
   };
   // do request
-  return request(url, options).then(res => {
+  return fetch(url, options).then(res => {
     return "success";
   }).catch(err => { // deal with errors
     addMeta(context, { name: err.name, message: err.message });
